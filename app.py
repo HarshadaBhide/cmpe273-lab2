@@ -27,7 +27,7 @@ class HelloWorldService(ServiceBase):
             responseText = r.text
             crimes = re.findall(r'"cdid":\w*,"\w*":"\w*","\w*":"\d*/\d*/\d* \w*:\w*\s*\w*","\w*":"[\w*\s*]*"', responseText)
             totalCrimes = 0
-            crimeType = {'Assault': 0, 'Arrest': 0, 'Burglary': 0, 'Robbery': 0, 'Theft': 0, 'Other': 0}
+            crimeType = {}
             eventTime = {'12:01am-3am': 0, '3:01am-6am': 0, '6:01am-9am': 0, '9:01am-12noon': 0, '12:01pm-3pm': 0, '3:01pm-6pm': 0, '6:01pm-9pm': 0, '9:01pm-12midnight': 0}
             tmMidNght  = datetime.strptime(' 12:00 AM', ' %I:%M %p')
             tm3am  = datetime.strptime(' 3:00 AM', ' %I:%M %p')
